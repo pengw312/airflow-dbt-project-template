@@ -4,7 +4,7 @@ from pyspark.sql import SparkSession
 # events -  user_id, event_type, event_timestamp, ds (partition key)
 # users - user_id, age, country, ds (partition key)
 # aggregate output -  age, country, post_event_count, like_event_count, total_event_count, ds
-def do_course_consumption_agg_transformation(spark, courses, users, view_events, ds):
+def do_course_consumption_job_transformation(spark, courses, users, view_events, ds):
     query = f"""
     SELECT
          u.user_id,
